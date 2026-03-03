@@ -3,7 +3,6 @@ import streamlit as st
 import pandas as pd
 import pickle
 import numpy as np
-from params import Params
 
 class Params:
     def __init__(self, **kwargs):
@@ -145,6 +144,7 @@ def app():
 
 if __name__ == "__main__":
     app()
+
 
 
 
