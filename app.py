@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import numpy as np
+from params import Params
 
 def app():
     # 加载模型和参数
@@ -86,4 +87,5 @@ def app():
 
 if __name__ == "__main__":
     app()
+
 
