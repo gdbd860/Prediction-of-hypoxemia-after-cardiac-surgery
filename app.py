@@ -11,9 +11,7 @@ def app():
         model = pickle.load(file)
     with open('./param.pkl', 'rb') as file:
         params = pickle.load(file)
-    data = pd.read_excel(params.data_process_save_path, params.train_sheet)
-    X = data.drop(columns=[params.y[0]])
-    feature_names = np.array(X.columns, dtype=str)
+    feature_names = ['Smoke','Type of surgery','Education','BADL''Pressure ulcer classification','BMI','Prothrombin time','C-reactive protein' 'Creatinine' 'Age' 'NT-proBNP' 'LVEF','Extracorporeal circulation time']
 
     #页面布局
     st.set_page_config(layout='wide')
@@ -87,6 +85,7 @@ def app():
 
 if __name__ == "__main__":
     app()
+
 
 
 
