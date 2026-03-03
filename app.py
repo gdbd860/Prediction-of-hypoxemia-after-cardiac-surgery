@@ -7,10 +7,10 @@ from params import Params
 
 def app():
     # 加载模型和参数
-    with open('./param.pkl', 'rb') as file:
-        params = pickle.load(file)
     with open("./XGBClassifier_ca.pkl", 'rb') as file:
         model = pickle.load(file)
+    with open('./param.pkl', 'rb') as file:
+        params = pickle.load(file)
     data = pd.read_excel(params.data_process_save_path, params.train_sheet)
     X = data.drop(columns=[params.y[0]])
     feature_names = np.array(X.columns, dtype=str)
@@ -87,5 +87,6 @@ def app():
 
 if __name__ == "__main__":
     app()
+
 
 
