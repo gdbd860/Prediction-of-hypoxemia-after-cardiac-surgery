@@ -11,7 +11,7 @@ def app():
         model = pickle.load(file)
     with open('./param.pkl', 'rb') as file:
         params = pickle.load(file)
-    feature_names = ['Smoke','Type of surgery','Education','BADL''Pressure ulcer classification','BMI','Prothrombin time','C-reactive protein' 'Creatinine' 'Age' 'NT-proBNP' 'LVEF','Extracorporeal circulation time']
+    feature_names = ['Smoke','Type of surgery','Education','BADL','Pressure ulcer classification','BMI','Prothrombin time','C-reactive protein','Creatinine','Age','NT-proBNP','LVEF','Extracorporeal circulation time']
 
     #页面布局
     st.set_page_config(layout='wide')
@@ -85,6 +85,7 @@ def app():
 
 if __name__ == "__main__":
     app()
+
 
 
 
